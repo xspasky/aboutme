@@ -141,42 +141,11 @@
             <h2>Contact</h2>
             <div class="contact-item">
                 <div class="contact-icon">✉️</div>
-                <div></div>
+                <div>OwenCheungH@gmail.com</div>
            
             </div>
         </div>
-    </div>
-    
-    
-        
-        // Click effect
-        document.addEventListener('click', function(e) {
-            const effect = document.createElement('div');
-            effect.className = 'click-effect';
-            effect.style.left = `${e.clientX}px`;
-            effect.style.top = `${e.clientY}px`;
-            document.body.appendChild(effect);
-            
-            // Remove effect after animation completes
-            setTimeout(() => {
-                effect.remove();
-            }, 600);
-        });
-        
-        // Container hover effect
-        const containers = document.querySelectorAll('.container');
-        containers.forEach(container => {
-            container.addEventListener('mousemove', (e) => {
-                const x = e.clientX - container.getBoundingClientRect().left;
-                const y = e.clientY - container.getBoundingClientRect().top;
-                
-                container.style.transform = `perspective(1000px) rotateX(${(y - container.offsetHeight/2) / 20}deg) rotateY(${(x - container.offsetWidth/2) / 20}deg)`;
-            });
-            
-            container.addEventListener('mouseleave', () => {
-                container.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-            });
-        });
+    </div> 
     </script>
 </body>
 </html>
